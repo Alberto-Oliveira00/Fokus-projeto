@@ -16,7 +16,7 @@ const musicaFim = new Audio("/sons/beep.mp3")
 const musicaPause = new Audio("/sons/pause.mp3")
 const musicaPlay = new Audio("sons/play.wav")
 
-let TempoDecorridoEmSegundo = 10
+let TempoDecorridoEmSegundo = 1500
 let intervaloId = null
 
 musica.loop = true;
