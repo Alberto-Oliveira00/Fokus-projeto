@@ -11,9 +11,9 @@ const imagemPausar = document.querySelector("#start-pause img")
 const tempoNaTela = document.querySelector("#timer")
 
 const musicaFocoInput = document.querySelector("#alternar-musica")
-const musica = new Audio("/sons/luna-rise-part-one.mp3")
-const musicaFim = new Audio("/sons/beep.mp3")
-const musicaPause = new Audio("/sons/pause.mp3")
+const musica = new Audio("sons/luna-rise-part-one.mp3")
+const musicaFim = new Audio("sons/beep.mp3")
+const musicaPause = new Audio("sons/pause.mp3")
 const musicaPlay = new Audio("sons/play.wav")
 
 let TempoDecorridoEmSegundo = 1500
@@ -53,7 +53,7 @@ function alterarContexto (contexto) {
         contexto.classList.remove("active")
     })
     html.setAttribute("data-contexto", contexto)
-    banner.setAttribute("src", `/imagens/${contexto}.png`)
+    banner.setAttribute("src", `imagens/${contexto}.png`)
     switch(contexto) {
         case "foco":
         titulo.innerHTML = `Otimize sua produtividade,<br>
@@ -100,13 +100,13 @@ function iniciarOupausar () {
     musicaPlay.play()
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = "Pausar"
-    imagemPausar.setAttribute("src", "/imagens/pause.png")    
+    imagemPausar.setAttribute("src", "imagens/pause.png")    
 }
 
 function zerar () {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = "Começar"
-    imagemPausar.setAttribute("src", "/imagens/play_arrow.png")
+    imagemPausar.setAttribute("src", "imagens/play_arrow.png")
     intervaloId = null
 }
 
